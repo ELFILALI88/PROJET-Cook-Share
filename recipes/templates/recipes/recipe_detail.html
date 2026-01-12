@@ -1,0 +1,14 @@
+
+<h1>{{ recipe.title }}</h1>
+
+<p><strong>Ingrédients :</strong></p>
+<p>{{ recipe.ingredients }}</p>
+
+<p><strong>Instructions :</strong></p>
+<p>{{ recipe.instructions }}</p>
+
+<p><strong>Auteur :</strong> {{ recipe.author }}</p>
+
+<br>
+<a href="{% url 'recipe_list' %}">⬅ Retour à la liste</a>
+
