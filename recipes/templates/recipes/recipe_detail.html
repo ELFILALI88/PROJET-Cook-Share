@@ -12,3 +12,11 @@
 <br>
 <a href="{% url 'recipe_list' %}">⬅ Retour à la liste</a>
 
+{% if recipe.author == user %}
+  <a href="{% url 'recipe_edit' recipe.id %}">Modifier</a>
+  <a href="{% url 'recipe_delete' recipe.id %}">Supprimer</a>
+{% endif %}
+<hr>
+
+<a href="{% url 'recipe_edit' recipe.id %}">Modifier</a>
+<a href="{% url 'recipe_delete' recipe.id %}">Supprimer</a>

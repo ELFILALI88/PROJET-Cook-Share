@@ -1,0 +1,9 @@
+<h2>Supprimer la recette</h2>
+
+<p>Voulez-vous vraiment supprimer "{{ recipe.title }}" ?</p>
+
+<form method="POST">
+  {% csrf_token %}
+  <button type="submit">Oui, supprimer</button>
+  <a href="{% url 'recipe_detail' recipe.id %}">Annuler</a>
+</form>
